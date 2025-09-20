@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.0] - 2025-09-20
+- Marked the event bus stable: sync/async chaining, lifecycle hooks, metadata checks,
+  and automated tag pushes are now backed by semver guarantees.
+- No API changes were required; packages already using 0.x can upgrade without code changes.
+
 ## [0.2.3] - 2025-09-20
 - Documented automatic `git push --follow-tags` behaviour and ensured repository metadata stays in sync across commits.
 
