@@ -1,5 +1,8 @@
 # Changelog
 
+## [0.2.3] - 2025-09-20
+- Documented automatic `git push --follow-tags` behaviour and ensured repository metadata stays in sync across commits.
+
 ## [0.2.2] - 2025-09-20
 - Added package metadata validation hooks and post-commit auto-tagging when versions change on the default branch.
 - Populated `repository`, `bugs`, and `homepage` fields to satisfy npm provenance requirements.
