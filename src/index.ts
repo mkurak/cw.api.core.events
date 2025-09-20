@@ -19,3 +19,4 @@ export {
     type AnyEventDefinition,
     type AnyEventHandler
 } from './types.js';
+export { eventsModule, useEvents, type UseEventsOptions } from './module.js';

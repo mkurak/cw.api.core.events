@@ -3,6 +3,9 @@
 > Event bus internals, coding conventions, and release workflow reference.
 
 ## Architecture Overview
+- **Module integration** (`src/module.ts`): `eventsModule` registers `EventBus`
+  with the DI container as a singleton; `useEvents()` applies the same module
+  to the default container and returns the shared instance.
 - **EventBus** (`src/eventBus.ts`):
   - Holds a registry of `EventDefinition` objects and ordered subscriber sets.
   - `trigger` chooses sync vs async execution according to the definition and
@@ -41,6 +44,8 @@
   - Runtime rejection of invalid async handlers on sync events.
   - Error capture, `throwOnError`, core lifecycle emission, and metadata flow.
   - Subscriber bookkeeping (`unsubscribe`, `removeEvent`, `hasSubscribers`).
+- `tests/module.test.ts` ensures `eventsModule` and `useEvents()` integrate
+  with the container as expected, always returning the same singleton instance.
 - Maintain coverage ≥90% (statements/lines/functions/branches) in line with the
   repository hooks by extending the suite when new behaviours appear.
 

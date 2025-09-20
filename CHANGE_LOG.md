@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.1.1] - 2025-09-20
+- Normalised project documentation to English across README, DEV_NOTES, and the
+  changelog to honour language guidelines.
+
+## [1.1.0] - 2025-09-20
+- Added the `eventsModule` and `useEvents()` helpers so `EventBus` registers as a
+  singleton inside the DI container.
+- Introduced a module-focused Jest scenario that verifies the singleton
+  behaviour.
+- Updated README/DEV_NOTES with DI integration guidance.
+
 ## [1.0.0] - 2025-09-20
 - Marked the event bus stable: sync/async chaining, lifecycle hooks, metadata checks,
   and automated tag pushes are now backed by semver guarantees.

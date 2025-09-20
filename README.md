@@ -123,9 +123,10 @@ when they trigger themselves—subscribe to them directly for logging or metrics
 
 ## Integration Tips
 
-- **Dependency Injection** – register a singleton `EventBus` in
-  `cw.api.core.di` and inject it wherever you need event coordination. Creating
-  multiple instances is cheap when you need isolated scopes (e.g. tests).
+- **Dependency Injection** – When pairing with `cw.api.core.di`, import either
+  `eventsModule` or the `useEvents()` helper. The module registers `EventBus` as
+  a singleton, while `useEvents()` attaches the module to the default container
+  and returns the shared instance.
 - **Testing** – use the returned invocation context to assert results, stop
   reasons, and error surfaces. The Jest suite in `tests/eventBus.test.ts`
   demonstrates common scenarios.
