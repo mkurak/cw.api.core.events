@@ -52,7 +52,7 @@
   `dist/` with declarations.
 - `npm run release -- <type>` – wraps `npm version`, commits the bump, tags,
   and pushes (requires a configured git remote).
-- `npm run hooks:install` – activates `.githooks` (format → lint → coverage).
+- `npm run hooks:install` – activates `.githooks` (format → metadata validation → lint → coverage plus post-commit auto-tagging on version bumps).
 
 ## Release Checklist
 1. Update `CHANGE_LOG.md`, `README.md`, and this file to reflect changes.
