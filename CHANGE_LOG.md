@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.2] - 2025-09-21
+### Changed
+- Removed the `release` npm script and refreshed README/DEV_NOTES to favour `npm version <type>` + `git push --follow-tags`.
+
 ## [1.1.1] - 2025-09-20
 - Normalised project documentation to English across README, DEV_NOTES, and the
   changelog to honour language guidelines.

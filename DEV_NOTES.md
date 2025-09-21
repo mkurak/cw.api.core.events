@@ -55,17 +55,16 @@
   mode; coverage command enforces repository thresholds.
 - `npm run build` – TypeScript build via `tsconfig.build.json`, emitting ESM to
   `dist/` with declarations.
-- `npm run release -- <type>` – wraps `npm version`, commits the bump, tags,
-  and pushes (requires a configured git remote).
+- `npm version <type>` – bumps the version and creates commit/tag (run `git push --follow-tags` afterwards).
 - `npm run hooks:install` – activates `.githooks` (format → metadata validation → lint → coverage plus post-commit auto-tagging on version bumps).
 
 ## Release Checklist
 1. Update `CHANGE_LOG.md`, `README.md`, and this file to reflect changes.
 2. Run `npm run lint`, `npm run test:coverage`, and `npm run build`.
 3. Ensure working tree is clean and commit only relevant files.
-4. `npm run release -- <type>` (prefer `minor` for feature additions, `patch`
-   for fixes) – script handles tagging and pushing.
-5. Publish via GitHub Actions or `npm publish --provenance` if needed.
+4. `npm version <type>` (prefer `minor` for feature additions, `patch` for fixes).
+5. `git push --follow-tags`.
+6. Publish via GitHub Actions or `npm publish --provenance` if needed.
 
 ## Future Ideas
 - Optional child buses for scoped subscriber sets (kept in backlog until a

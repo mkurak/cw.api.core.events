@@ -143,7 +143,7 @@ npm run build
 ```
 
 Publish flow: update docs/changelog, run the full validation pipeline, then
-`npm run release -- <type>` to bump the version, create a git tag, and push.
+`npm version <type>` to bump the version and create a tag (follow with `git push --follow-tags`).
 
 ## License
 
