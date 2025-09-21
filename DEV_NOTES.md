@@ -36,7 +36,8 @@
 - `removeEvent` does not allow removing core events to avoid breaking internal
   diagnostics. Regular events are removed together with their subscribers.
 
-## Testing Strategy
+## Testing
+- Pre-commit hook now runs format → lint → coverage → build → smoke to prevent broken deploys. Strategy
 - Jest suites live under `tests/` and rely on ts-jest in ESM mode.
 - `tests/eventBus.test.ts` covers:
   - Sequential propagation of results for sync and async events.

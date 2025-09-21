@@ -11,7 +11,7 @@ function fail(message, error) {
 
 try {
   const bus = new EventBus({ includeCoreEvents: false });
-  const smokeEvent = defineEvent<string, string, 'async'>({
+  const smokeEvent = defineEvent({
     name: 'smoke.event',
     mode: 'async',
     description: 'Smoke test event'
