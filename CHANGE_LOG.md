@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.5] - 2025-09-21
+### Changed
+- Dropped the post-commit tag hook so release tagging is manual again.
+
 ## [1.1.3] - 2025-09-21
 ### Added
 - Added a smoke test covering async event triggering, result piping, and unsubscribe behaviour.
