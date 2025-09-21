@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.1.3] - 2025-09-21
+### Added
+- Added a smoke test covering async event triggering, result piping, and unsubscribe behaviour.
+### Changed
+- Documentation now guides releases through `npm version <type>` followed by `git push --follow-tags`.
+
 ## [1.1.2] - 2025-09-21
 ### Changed
 - Removed the `release` npm script and refreshed README/DEV_NOTES to favour `npm version <type>` + `git push --follow-tags`.
